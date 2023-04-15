@@ -8,7 +8,7 @@ stage('Checkout'){
 
 steps{
 
-git branch: "main", url: 'https://github.com/chiranjiv09/g2-spring-api-gateway.git'
+git branch: "main", url: 'https://github.com/SURJEET3010/spring-gateway.git'
 
 }
 
@@ -40,7 +40,7 @@ stage('DockerBuild') {
 
 steps {
 
-sh 'docker build -t kushck09/g2-api-gateway-service:latest .'
+sh 'docker build -t surjeet007/g2-api-gateway-service:latest .'
 
 }
 
@@ -50,7 +50,7 @@ stage('Login') {
 
 steps {
 
-sh 'echo dockerhub123 | docker login -u kushck09 --password-stdin'
+sh 'echo QAZwsx@1234 | docker login -u surjeet007 --password-stdin'
 
 }
 
@@ -60,7 +60,7 @@ stage('Push') {
 
 steps {
 
-sh 'docker push kushck09/g2-api-gateway-service'
+sh 'docker push surjeet007/g2-api-gateway-service'
 
 }
 
